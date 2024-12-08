@@ -1,0 +1,25 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <action
+        android:id="@+id/open_action_to_mainFragment"
+        app:destination="@id/mainFragment"
+        app:popUpTo="@+id/nav_graph"
+        app:popUpToInclusive="true">
+
+    </action>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.syeda.myapplication.fragment.LoginFragment"
+        android:label="Login" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.syeda.myapplication.fragment.MainFragment"
+        android:label="Main">
+        <argument
+            android:name="username"
+            android:defaultValue="Username" />
+    </fragment>
+</navigation>

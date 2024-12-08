@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="press_to_load">Press to Load</string>
+    <string name="press_to_refresh">Press to Refresh</string>
+</resources>

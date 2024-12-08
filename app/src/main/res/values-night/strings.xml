@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="press_to_load">Press to Load</string>
+    <string name="press_to_refresh">Press to Refresh</string>
+</resources>
