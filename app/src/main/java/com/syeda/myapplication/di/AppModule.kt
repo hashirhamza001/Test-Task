@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.syeda.myapplication.AppDatabase
 import com.syeda.myapplication.MedicineDao
 import com.syeda.myapplication.repo.MedicineApi
+import com.syeda.myapplication.repo.MedicineRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

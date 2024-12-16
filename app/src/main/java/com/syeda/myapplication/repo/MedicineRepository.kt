@@ -3,6 +3,7 @@ package com.syeda.myapplication.repo
 import com.syeda.myapplication.model.Medicine
 import com.syeda.myapplication.MedicineDao
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.catch
 import javax.inject.Inject
 
 class MedicineRepository @Inject constructor(
@@ -21,8 +22,8 @@ class MedicineRepository @Inject constructor(
     }
 
     // Get medicines from the database (offline support)
-    fun getMedicines(): Flow<List<Medicine>> {
-        return dao.getAllMedicines()
+     fun getMedicines(): Flow<List<Medicine>> {
+        return dao.getAllMedicines().catch { emit(emptyList()) }
     }
     suspend fun deleteMedicine(medicine: Medicine) {
         dao.deleteMedicine(medicine)
